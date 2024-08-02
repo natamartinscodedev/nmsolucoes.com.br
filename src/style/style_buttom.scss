@@ -1,0 +1,26 @@
+.style_on,
+.style_off {
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+
+    &:hover {
+        scale: 1.1;
+        background-color: #444;
+    }
+}
+
+.style_on {
+    background-color: black;
+    color: white;
+}
+
+.style_off {
+    background-color: white;
+    color: black;
+
+    &:hover {
+        scale: 1.1;
+        background-color: #eeeeee;
+    }
+}

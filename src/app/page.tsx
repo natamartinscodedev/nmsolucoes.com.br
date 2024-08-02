@@ -1,95 +1,98 @@
+'use client'
+
+import Link from "next/link";
+import Buttom from '@/components/Button/index'
 import Image from "next/image";
-import styles from "./page.module.css";
+import Background from '@/image/Texture.png'
+import CardServiceInfo from '@/components/cardInfoService/index'
+import ImgAfforai from '@/image/afforai.jpeg'
+import ImgInter from '@/image/inter.jpeg'
+import { MoveDown } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <header className="container_header">
+        <div className="card_background">
+          <Image src={Background} alt="" />
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <div className="container">
+          <nav className="card_navbar">
+            <Link href='/' className="logo">NM</Link>
+            <Buttom
+              title="Solicite um Orçamento"
+              styleColor={true}
+            />
+          </nav>
+          <div className="card_infosection">
+            <div>
+              <h1>Transforme Seu Negócio com Soluções Web de Alto Desempenho</h1>
+              <h3>Desenvolvemos Páginas Web e Landing Pages de Alta Performance</h3>
+              <p>Aumente sua conversão e engajamento com páginas rápidas, responsivas e otimizadas para SEO.</p>
+            </div>
+            <p className="arrow_animation"><MoveDown size={50} /></p>
+            <div className="card_bluer"></div>
+          </div>
+        </div>
+      </header>
+      <main className="container_main">
+        <section className="card_animation">
+          <div>
+            <ul>
+              <li className="animation_skills-true">Transforme Seu Negócio com Soluções Web de Alto Desempenho</li>
+              <li className="animation_skills-false">Transforme Seu Negócio com Soluções Web de Alto Desempenho</li>
+              <li className="animation_skills-true">Transforme Seu Negócio com Soluções Web de Alto Desempenho</li>
+              <li className="animation_skills-false">Transforme Seu Negócio com Soluções Web de Alto Desempenho</li>
+            </ul>
+            <ul>
+              <li className="animation_skills-true">Transforme Seu Negócio com Soluções Web de Alto Desempenho</li>
+              <li className="animation_skills-false">Transforme Seu Negócio com Soluções Web de Alto Desempenho</li>
+              <li className="animation_skills-true">Transforme Seu Negócio com Soluções Web de Alto Desempenho</li>
+              <li className="animation_skills-false">Transforme Seu Negócio com Soluções Web de Alto Desempenho</li>
+            </ul>
+          </div>
+        </section>
+        <section className="card_services">
+          <h2>Serviços</h2>
+          <div>
+            <div className="box_services">
+              <div>
+                <Image src={ImgAfforai} alt="" />
+              </div>
+              <CardServiceInfo
+                title="Landing Pages Personalizadas"
+                description="Crie uma primeira impressão inesquecível com landing pages que capturam a essência do seu negócio. Nossas páginas são otimizadas para conversão e projetadas para engajar seus visitantes desde o primeiro clique."
+                link="https://afforai-landingpage.vercel.app/"
+              />
+            </div>
+            <div className="box_services gridResponde">
+              <CardServiceInfo
+                title="Desenvolvimento de Páginas Web"
+                description="De sites institucionais a portais complexos, desenvolvemos soluções completas e personalizadas que atendem às necessidades do seu negócio. Utilizamos as tecnologias mais recentes para garantir desempenho, segurança e escalabilidade."
+                link="https://webinter-gamma.vercel.app/"
+              />
+              <div>
+                <Image src={ImgInter} alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="card_contact">
+          <div>
+            <h2>Pronto para Transformar Seu Negócio?</h2>
+            <p>Qual projeto você tem em mente?</p>
+            <p className="arrow_animation"><MoveDown size={50} /></p>
+          </div>
+          <Buttom
+            title="Solicite um Orçamento"
+            styleColor={false}
+          />
+          <span></span>
+        </section>
+      </main>
+      <footer className="container_footer">
+        <p>@Natã Martins - 2021 - Todos os diretos reservados.</p>
+      </footer>
+    </>
   );
 }
