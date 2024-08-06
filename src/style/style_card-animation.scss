@@ -2,6 +2,7 @@
     width: 100%;
     padding: 2rem;
     background-color: rgb(156, 156, 156);
+
 }
 
 .card_animation div {
@@ -11,7 +12,7 @@
     justify-content: center;
     gap: 1rem;
     overflow: hidden;
-    animation: rollText 15s linear infinite;
+    
 
     ul {
         display: flex;
@@ -20,9 +21,11 @@
         gap: 2rem;
         list-style: none;
         white-space: nowrap;
+   
 
         li {
             font-size: 1.5rem;
+            animation: rollText 15s linear infinite;
         }
     }
 }

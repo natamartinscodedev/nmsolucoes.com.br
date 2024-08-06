@@ -18,7 +18,8 @@ export default function Home() {
         </div>
         <div className="container">
           <nav className="card_navbar">
-            <Link href='/' className="logo">NM</Link>
+            <Link href='' className="logo">NM</Link>
+            <Link href='https://nmprofile.vercel.app/ptbr' target="__blank" className="logo">All Works</Link>
             <Buttom
               title="Solicite um Orçamento"
               styleColor={true}
