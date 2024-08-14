@@ -11,12 +11,16 @@ import { MoveDown } from "lucide-react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import TypingEffect from "@/components/TypingEffect";
+import { useEffect } from "react";
 
 export default function Home() {
-  AOS.init({
-    debounceDelay: 99,
-    throttleDelay: 99,
-  });
+
+  useEffect(() => {
+    AOS.init({
+      debounceDelay: 99,
+      throttleDelay: 99,
+    });
+  }, []);
 
   return (
     <>
