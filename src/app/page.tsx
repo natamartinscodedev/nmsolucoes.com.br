@@ -9,6 +9,14 @@ import ImgAfforai from '@/image/afforai.jpeg'
 import ImgInter from '@/image/inter.jpeg'
 import { MoveDown } from "lucide-react";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import TypingEffect from "@/components/TypingEffect";
+AOS.init({
+  debounceDelay: 99,
+  throttleDelay: 99,
+});
+
 export default function Home() {
   return (
     <>
@@ -27,8 +35,8 @@ export default function Home() {
           </nav>
           <div className="card_infosection">
             <div>
-              <h1>Transforme Seu Negócio com Soluções Web de Alto Desempenho</h1>
-              <h3>Desenvolvemos Páginas Web e Landing Pages de Alta Performance</h3>
+              <h1><TypingEffect description="Transforme Seu Negócio com Soluções Web de Alto Desempenho" /></h1>
+              <h3><TypingEffect description="Desenvolvemos Páginas Web e Landing Pages de Alta Performance" /></h3>
               <p>Aumente sua conversão e engajamento com páginas rápidas, responsivas e otimizadas para SEO.</p>
             </div>
             <p className="arrow_animation"><MoveDown size={50} /></p>
@@ -54,25 +62,30 @@ export default function Home() {
           </div>
         </section>
         <section className="card_services">
-          <h2>Serviços</h2>
+          <h2 data-aos="flip-down">Serviços</h2>
           <div>
             <div className="box_services">
-              <div>
+              <div data-aos="fade-right">
                 <Image src={ImgAfforai} alt="" />
               </div>
-              <CardServiceInfo
-                title="Landing Pages Personalizadas"
-                description="Crie uma primeira impressão inesquecível com landing pages que capturam a essência do seu negócio. Nossas páginas são otimizadas para conversão e projetadas para engajar seus visitantes desde o primeiro clique."
-                link="https://afforai-landingpage.vercel.app/"
-              />
+              <div data-aos="fade-up-left">
+                <CardServiceInfo
+
+                  title="Landing Pages Personalizadas"
+                  description="Crie uma primeira impressão inesquecível com landing pages que capturam a essência do seu negócio. Nossas páginas são otimizadas para conversão e projetadas para engajar seus visitantes desde o primeiro clique."
+                  link="https://afforai-landingpage.vercel.app/"
+                />
+              </div>
             </div>
             <div className="box_services gridResponde">
-              <CardServiceInfo
-                title="Desenvolvimento de Páginas Web"
-                description="De sites institucionais a portais complexos, desenvolvemos soluções completas e personalizadas que atendem às necessidades do seu negócio. Utilizamos as tecnologias mais recentes para garantir desempenho, segurança e escalabilidade."
-                link="https://webinter-gamma.vercel.app/"
-              />
-              <div>
+              <div data-aos="fade-down-right">
+                <CardServiceInfo
+                  title="Desenvolvimento de Páginas Web"
+                  description="De sites institucionais a portais complexos, desenvolvemos soluções completas e personalizadas que atendem às necessidades do seu negócio. Utilizamos as tecnologias mais recentes para garantir desempenho, segurança e escalabilidade."
+                  link="https://webinter-gamma.vercel.app/"
+                />
+              </div>
+              <div data-aos="fade-down">
                 <Image src={ImgInter} alt="" />
               </div>
             </div>
@@ -80,8 +93,8 @@ export default function Home() {
         </section>
         <section className="card_contact">
           <div>
-            <h2>Pronto para Transformar Seu Negócio?</h2>
-            <p>Qual projeto você tem em mente?</p>
+            <h2 data-aos="zoom-in-up">Pronto para Transformar Seu Negócio?</h2>
+            <p data-aos="zoom-in-left">Qual projeto você tem em mente?</p>
             <p className="arrow_animation"><MoveDown size={50} /></p>
           </div>
           <Buttom
