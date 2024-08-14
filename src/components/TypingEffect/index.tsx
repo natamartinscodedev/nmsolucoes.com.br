@@ -1,5 +1,4 @@
 "use client"
-import { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 
 const TypingEffect = ({ description }: any) => {
