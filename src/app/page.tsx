@@ -8,16 +8,16 @@ import CardServiceInfo from '@/components/cardInfoService/index'
 import ImgAfforai from '@/image/afforai.jpeg'
 import ImgInter from '@/image/inter.jpeg'
 import { MoveDown } from "lucide-react";
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import TypingEffect from "@/components/TypingEffect";
-AOS.init({
-  debounceDelay: 99,
-  throttleDelay: 99,
-});
 
 export default function Home() {
+  AOS.init({
+    debounceDelay: 99,
+    throttleDelay: 99,
+  });
+
   return (
     <>
       <header className="container_header">
