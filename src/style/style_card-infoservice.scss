@@ -71,6 +71,11 @@
         color: white;
         border-radius: 10px;
         padding: 10px 1.5rem;
+
+        &:hover {
+            background-color: #777;
+            scale: 1.1;
+        }
     }
 }
 

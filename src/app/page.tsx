@@ -40,7 +40,7 @@ export default function Home() {
           <div className="card_infosection">
             <div>
               <h1><TypingEffect description="Transforme Seu Negócio com Soluções Web de Alto Desempenho" /></h1>
-              <h3><TypingEffect description="Desenvolvemos Páginas Web e Landing Pages de Alta Performance" /></h3>
+              <h3>Desenvolvemos Páginas Web e Landing Pages de Alta Performance</h3>
               <p>Aumente sua conversão e engajamento com páginas rápidas, responsivas e otimizadas para SEO.</p>
             </div>
             <p className="arrow_animation"><MoveDown size={50} /></p>
