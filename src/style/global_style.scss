@@ -50,3 +50,11 @@ a {
         transform: translateY(-20%);
     }
 }
+
+@media (max-width: 700px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+}

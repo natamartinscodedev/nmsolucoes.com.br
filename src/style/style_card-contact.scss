@@ -41,3 +41,11 @@
         z-index: -2;
     }
 }
+
+@media (max-width: 700px) {
+    .card_infosection {
+        div h1 {
+            font-size: 25px;
+        }
+    }
+}
